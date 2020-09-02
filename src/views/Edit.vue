@@ -32,16 +32,16 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-3 order-lg-2" style="z-index:10">
                                 <div class="card-profile-image">
-                                    <a href="#/dp">
+                                    <!--<a href="#/dp">-->
                                         <img v-if="data.dp===null || data.dp==-1" title="Select a different DP" src='img/user.png' class="img-fluid rounded shadow-lg" style="height:200px;object-fit:cover">
                                         <img v-else title="Select a different DP" :src='data.pic[data.dp]' class="img-fluid rounded shadow-lg" style="height:200px;object-fit:cover">
-                                    </a>
+                                    <!--</a>-->
                                 </div>
                             </div>
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                                 <div style="padding-right:0;padding-left:0" class="card-profile-actions py-4 mt-lg-0">
                                     <center>
-                                    <a href="#/memoirs"><base-button style="margin-right:7px!important" type="info" size="sm" class="mr-4">Review Memoirs</base-button></a>
+                                    <!--<a href="#/memoirs"><base-button style="margin-right:7px!important" type="info" size="sm" class="mr-4">Review Memoirs</base-button></a>-->
                                     <base-button @click="logout" style="margin-right:0!important" type="danger" size="sm" class="mr-4">Logout</base-button>
                                     <br/>
                                     <base-button @click="link=true" style="margin-right:7px!important;margin-top:10px" type="success" size="sm" class="mr-4">Shareable Link</base-button>

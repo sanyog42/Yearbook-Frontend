@@ -78,7 +78,7 @@
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                               <div class="card-profile-actions py-4 mt-lg-0">
                                   <center>
-                                  <base-button @click="vmodal=true" style="margin-right:7px!important" type="info" size="sm" class="mr-4">Write Memoir</base-button>
+                                  <!--<base-button @click="vmodal=true" style="margin-right:7px!important" type="info" size="sm" class="mr-4">Write Memoir</base-button>-->
                                   <base-button @click="logout" style="margin-right:0!important" type="danger" size="sm" class="mr-4">Logout</base-button>
                                   </center>
                                   <modal :show.sync="vmodal"
