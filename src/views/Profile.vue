@@ -1,6 +1,11 @@
 <template>
     <div class="profile-page" style="min-height:100vh" :key="$route.query.roll">
       <div style="z-index:5;width:100%;top:10px;position:absolute;">
+        <div class="alert alert-primary" role="alert">
+          <center>
+          Link to the yearbook available <a href="/Y16_Yearbook.pdf" target="_blank" class="alert-link">here</a>
+          </center>
+        </div>
       <center>
         <div class="row" style="width:350px">
           <a href="#/mypage"><base-button style="height:46px;width:50px;padding:10px;margin:0" type="secondary" icon="ni ni-circle-08"></base-button></a>
@@ -26,6 +31,8 @@
           </div>
         </section>
         <section class="section section-skew">
+          <div style="padding-top:80px">
+          </div>
             <div class="container" style="max-width:800px">
                 <card shadow class="card-profile mt--300" no-body>
                   <div v-if="!found" class="px-4">
