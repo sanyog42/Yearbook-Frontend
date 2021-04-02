@@ -92,7 +92,7 @@ export default {
       this.results.length = 0;
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/search', {
+      axios.post(_this.$store.state.server + '/search', {
         'query': _this.$route.query.q,
         'apiKey': _this.$store.state.key,
         'username': _this.$store.state.data.other.replace(/@.+/gm, "")

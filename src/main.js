@@ -16,14 +16,13 @@ Vue.use(VueLazyLoadVideo);
 let app = '';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDHJ_mVwyZo3S6BOkpoy9Pdg-ynZkqG-xc",
-  authDomain: "yearbook-snt.firebaseapp.com",
-  databaseURL: "https://yearbook-snt.firebaseio.com",
-  projectId: "yearbook-snt",
-  storageBucket: "yearbook-snt.appspot.com",
-  messagingSenderId: "409706521361",
-  appId: "1:409706521361:web:0c60d632fbfaef517ce2b0",
-  measurementId: "G-W7MSXHTF35"
+  apiKey: "AIzaSyBfUleEjGbnS2h2DeJItfELbbwSmZcpIkk",
+  authDomain: "yearbook17-2898c.firebaseapp.com",
+  projectId: "yearbook17-2898c",
+  storageBucket: "yearbook17-2898c.appspot.com",
+  messagingSenderId: "679703625941",
+  appId: "1:679703625941:web:746168e283f5a0b7cb225c",
+  measurementId: "G-84TC7TSECF"
 };
 
 firebase.initializeApp(firebaseConfig);

@@ -142,7 +142,7 @@ export default {
   	},
     getUser(userEmail){
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/userByEmail', {
+      axios.post(_this.$store.state.server + '/userByEmail', {
         'email': userEmail,
         'apiKey': firebase.auth().currentUser.displayName,
         'username': userEmail.replace(/@.+/gm, "")

@@ -13,6 +13,7 @@ export default new Vuex.Store({
 		})
   })],
 	state: {
+    server: 'https://yearbook.sntiitk.in',
 		loading: false,
     data: {},
     key: ''

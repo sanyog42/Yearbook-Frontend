@@ -1,6 +1,6 @@
 <template>
     <div class="profile-page" style="min-height:100vh" :key="$route.query.roll">
-      <div style="z-index:5;width:100%;top:10px;position:absolute;">
+      <!--<div style="z-index:5;width:100%;top:10px;position:absolute;">
         <div class="alert alert-primary" role="alert">
           <center>
           Link to the yearbook available <a href="/Y16_Yearbook.pdf" target="_blank" class="alert-link">here</a>
@@ -13,7 +13,7 @@
           <base-button @click="sear" style="height:46px;width:50px;padding:10px" type="primary" icon="ni ni-zoom-split-in"></base-button>
         </div>
       </center>
-      </div>
+    </div>-->
         <div style="position:absolute;filter:blur(2px);background-attachment:fixed;background-image: url('img/y16.jpg');padding-top:28%;width:100%;background-size:contain">
         </div>
         <section class="section-profile-cover section-shaped my-0">
@@ -85,7 +85,7 @@
                             <div class="col-lg-4 order-lg-3 text-lg-right align-self-lg-center">
                               <div class="card-profile-actions py-4 mt-lg-0">
                                   <center>
-                                  <!--<base-button @click="vmodal=true" style="margin-right:7px!important" type="info" size="sm" class="mr-4">Write Memoir</base-button>-->
+                                  <base-button @click="vmodal=true" style="margin-right:7px!important" type="info" size="sm" class="mr-4">Write Memoir</base-button>
                                   <base-button @click="logout" style="margin-right:0!important" type="danger" size="sm" class="mr-4">Logout</base-button>
                                   </center>
                                   <modal :show.sync="vmodal"
@@ -254,7 +254,7 @@ export default {
     post: function(){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/addComment', {
+      axios.post(_this.$store.state.server + '/addComment', {
         'roll': _this.$route.query.roll,
         'text': _this.memoir,
         'author': _this.$store.state.data.name,
@@ -278,7 +278,7 @@ export default {
       if (this.$route.query.roll == this.$store.state.data.roll){
         this.$router.replace('mypage');
       } else {
-        axios.post('https://yearbook.iitk.ac.in/getUser', {
+        axios.post(_this.$store.state.server + '/getUser', {
           'roll': _this.$route.query.roll,
           'apiKey': _this.$store.state.key,
           'username': _this.$store.state.data.other.replace(/@.+/gm, "")

@@ -128,7 +128,7 @@ export default {
     getData(){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/getUserForReg', {
+      axios.post(_this.$store.state.server + '/getUserForReg', {
         'roll': _this.roll
       })
       .then(response => {
@@ -152,7 +152,7 @@ export default {
 				var _this = this;
 				firebase.auth().createUserWithEmailAndPassword(this.altid, this.pass).then(
 				  function(user) {
-					  _this.sendEmail();
+					 _this.keyGen(user.user);
 				  },
 				  function(err) {
             _this.$store.commit('load', false);
@@ -164,6 +164,19 @@ export default {
         this.$notify({type: 'error', title: 'Error', text: 'Password re-entered is different!'})
 				this.wrong = true;
 			}
+    },
+    keyGen(x) {
+      var _this = this;
+      axios.post(_this.$store.state.server + '/keygen', {
+        'email': x.email,
+        'uid': x.uid
+      })
+      .then(response => {
+        _this.sendEmail();
+      })
+      .catch(e => {
+        _this.$notify({type: 'error', title: 'Error', text: e.message});
+      })
     },
     sendEmail() {
   		var user = firebase.auth().currentUser;

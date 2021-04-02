@@ -91,7 +91,7 @@ export default {
     update: function(id, vis){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/updateComment', {
+      axios.post(_this.$store.state.server + '/updateComment', {
         'roll': _this.$store.state.data.roll,
         '_id': id,
         'visibility': vis,
@@ -116,7 +116,7 @@ export default {
     reloadData: function(){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/userByEmail', {
+      axios.post(_this.$store.state.server + '/userByEmail', {
         'email': _this.$store.state.data.other,
         'apiKey': _this.$store.state.key,
         'username': _this.$store.state.data.other.replace(/@.+/gm, "")

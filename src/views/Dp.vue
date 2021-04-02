@@ -53,7 +53,7 @@ export default {
     updateDp: function(idx){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/dp', {
+      axios.post(_this.$store.state.server + '/dp', {
         'roll': _this.$store.state.data.roll,
         'dp': idx,
         'apiKey': _this.$store.state.key,

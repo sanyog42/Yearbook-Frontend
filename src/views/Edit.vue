@@ -1,6 +1,6 @@
 <template>
     <div class="profile-page">
-      <div style="z-index:5;width:100%;top:10px;position:absolute;">
+      <!--<div style="z-index:5;width:100%;top:10px;position:absolute;">
         <div class="alert alert-primary" role="alert">
           <center>
           Link to the yearbook available <a href="/Y16_Yearbook.pdf" target="_blank" class="alert-link">here</a>
@@ -13,7 +13,7 @@
           <base-button @click="sear" style="height:46px;width:50px;padding:10px" type="primary" icon="ni ni-zoom-split-in"></base-button>
         </div>
       </center>
-      </div>
+    </div>-->
         <div style="position:absolute;filter:blur(3px);background-attachment:fixed;background-image: url('img/y16.jpg');padding-top:28%;width:100%;background-size:contain">
         </div>
         <section class="section-profile-cover section-shaped my-0">
@@ -197,7 +197,7 @@ export default {
     reloadData: function(){
       this.$store.commit('load', true);
       var _this = this;
-      axios.post('https://yearbook.iitk.ac.in/userByEmail', {
+      axios.post(_this.$store.state.server + '/userByEmail', {
         'email': _this.$store.state.data.other,
         'apiKey': _this.$store.state.key,
         'username': _this.$store.state.data.other.replace(/@.+/gm, "")
