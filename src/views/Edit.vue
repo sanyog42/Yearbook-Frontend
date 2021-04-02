@@ -60,7 +60,7 @@
                                             body-classes="px-lg-5 py-lg-5"
                                             class="border-0">
                                           <template>
-                                              <p class="h3 text-center">Link: <span style="color:#5e72e4">https://yearbook.iitk.ac.in/#/profile?roll={{this.$store.state.data.roll}}</span></p>
+                                              <p class="h3 text-center">Link: <span style="color:#5e72e4">{{this.$store.state.server}}/#/profile?roll={{this.$store.state.data.roll}}</span></p>
                                               <base-button type="danger" @click="link=false" class="my-4">Close</base-button>
                                           </template>
                                       </card>
