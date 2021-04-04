@@ -1,11 +1,11 @@
 <template>
     <div class="profile-page" style="min-height:100vh" :key="$route.query.roll">
-      <!--<div style="z-index:5;width:100%;top:10px;position:absolute;">
-        <div class="alert alert-primary" role="alert">
+      <div style="z-index:5;width:100%;top:10px;position:absolute;">
+        <!--<div class="alert alert-primary" role="alert">
           <center>
           Link to the yearbook available <a href="/Y16_Yearbook.pdf" target="_blank" class="alert-link">here</a>
           </center>
-        </div>
+        </div>-->
       <center>
         <div class="row" style="width:350px">
           <a href="#/mypage"><base-button style="height:46px;width:50px;padding:10px;margin:0" type="secondary" icon="ni ni-circle-08"></base-button></a>
@@ -13,7 +13,7 @@
           <base-button @click="sear" style="height:46px;width:50px;padding:10px" type="primary" icon="ni ni-zoom-split-in"></base-button>
         </div>
       </center>
-    </div>-->
+    </div>
         <div style="position:absolute;filter:blur(2px);background-attachment:fixed;background-image: url('img/y16.jpg');padding-top:28%;width:100%;background-size:contain">
         </div>
         <section class="section-profile-cover section-shaped my-0">
