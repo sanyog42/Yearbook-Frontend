@@ -1,11 +1,11 @@
 <template>
     <div class="profile-page" style="min-height:100vh" :key="$route.query.roll">
       <div style="z-index:5;width:100%;top:10px;position:absolute;">
-        <!--<div class="alert alert-primary" role="alert">
+        <div class="alert alert-primary" style="margin-bottom:5px" role="alert">
           <center>
-          Link to the yearbook available <a href="/Y16_Yearbook.pdf" target="_blank" class="alert-link">here</a>
+          For any issue/query please contact via Whatsapp @ 8130717605. Call only for urgent issues.
           </center>
-        </div>-->
+        </div>
       <center>
         <div class="row" style="width:350px">
           <a href="#/mypage"><base-button style="height:46px;width:50px;padding:10px;margin:0" type="secondary" icon="ni ni-circle-08"></base-button></a>

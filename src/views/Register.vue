@@ -1,5 +1,12 @@
 <template>
     <section class="section section-shaped section-lg my-0" style="padding-top:0;height:100vh">
+      <div style="z-index:5;width:100%;top:5px;position:absolute;">
+        <div class="alert alert-primary" style="margin-bottom:5px" role="alert">
+          <center>
+          For any issue/query please contact via Whatsapp @ 8130717605. Call only for urgent issues.
+          </center>
+        </div>
+      </div>
         <LazyVideoAsGIF :src="'img/back.mp4'" id="myVideo"/>
         <div class="shape shape-style-1 bg-gradient-default">
             <span></span>
